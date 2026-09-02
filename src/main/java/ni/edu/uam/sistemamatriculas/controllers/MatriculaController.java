@@ -52,6 +52,11 @@ public class MatriculaController {
         LocalDate fechaNacimiento = dpFechaNacimiento.getValue();
         Boolean modalidad = rbModalidad.isSelected();
         Boolean horario = chbHorario.isSelected();
+        if (validarContrasena()) {
+            Estudiante estudiante = new Estudiante(nombre, apellido, usuario, contrasena, departamento, fechaNacimiento, null, modalidad, horario);
+            lista.agregar(estudiante);
+            limpiar();
+        }
 
 
     }
@@ -64,6 +69,18 @@ public class MatriculaController {
         cbDepartamento.getSelectionModel().clearSelection();
         lvcursos.getSelectionModel().clearSelection();
         dpFechaNacimiento.setValue(null);
+    }
+
+    public Boolean validarContrasena(){
+        if(pwContrasena.getText().length() < 8){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Contraseña inválida");
+            alert.setContentText("La contraseña debe tener al menos 8 caracteres");
+            alert.showAndWait();
+            return false;
+        }
+        return true;
     }
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
@@ -9,25 +9,29 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="700.0" prefWidth="620.0" spacing="8.0"
-      xmlns="http://javafx.com/javafx/17"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="ni.edu.uam.sistemamatriculas.controllers.MatriculaController">
+<VBox prefHeight="700.0" prefWidth="650.0" spacing="8.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.sistemamatriculas.controllers.MatriculaController">
    <padding>
-      <Insets bottom="20.0" left="25.0" right="25.0" top="20.0" />
+      <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
    </padding>
    <children>
-      <!-- Encabezado -->
+      <!-- Encabezado con Logo -->
       <HBox alignment="CENTER_LEFT" spacing="15.0">
          <children>
-            <ImageView fx:id="imgLogo" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagen/uamlogopng.png" />
+               </image>
+            </ImageView>
             <Label text="Sistema de Matrícula">
                <font>
                   <Font name="Yu Gothic Bold" size="20.0" />
@@ -36,78 +40,100 @@
          </children>
       </HBox>
 
-      <!-- Datos del Alumno -->
-      <Label text="Nombre:">
-         <font><Font name="Yu Gothic Bold" size="12.0" /></font>
-      </Label>
-      <TextField fx:id="txtNombre" />
-
-      <Label text="Apellido:">
-         <font><Font name="Yu Gothic Bold" size="12.0" /></font>
-      </Label>
-      <TextField fx:id="txtApellido" />
-
-      <Label text="Usuario:">
-         <font><Font name="Yu Gothic Bold" size="12.0" /></font>
-      </Label>
-      <TextField fx:id="txtUsuario" />
-
-      <Label text="Contraseña:">
-         <font><Font name="Yu Gothic Bold" size="12.0" /></font>
-      </Label>
-      <PasswordField fx:id="pwContrasena" />
-
-      <Label text="Fecha de nacimiento:">
-         <font><Font name="Yu Gothic Bold" size="12.0" /></font>
-      </Label>
-      <DatePicker fx:id="dpFechaNacimiento" maxWidth="1.7976931348623157E308" />
-
-      <!-- Departamento y Cursos -->
-      <HBox spacing="15.0">
+      <!-- Campos de Texto y Datos -->
+      <HBox spacing="10.0">
          <children>
             <VBox HBox.hgrow="ALWAYS">
                <children>
-                  <Label text="Departamento:">
-                     <font><Font name="Yu Gothic Bold" size="12.0" /></font>
-                  </Label>
-                  <ComboBox fx:id="cbDepartamento" maxWidth="1.7976931348623157E308" />
+                  <Label text="Nombre:"><font><Font name="Yu Gothic Bold" size="11.0" /></font></Label>
+                  <TextField fx:id="txtNombre" />
+               </children>
+            </VBox>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Apellido:"><font><Font name="Yu Gothic Bold" size="11.0" /></font></Label>
+                  <TextField fx:id="txtApellido" />
                </children>
             </VBox>
          </children>
       </HBox>
 
-      <!-- Modalidad -->
-      <Label text="Modalidad de estudio:">
-         <font><Font name="Yu Gothic Bold" size="12.0" /></font>
-      </Label>
+      <HBox spacing="10.0">
+         <children>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Contraseña:"><font><Font name="Yu Gothic Bold" size="11.0" /></font></Label>
+                  <PasswordField fx:id="txtPassword" />
+               </children>
+            </VBox>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Fecha de nacimiento:"><font><Font name="Yu Gothic Bold" size="11.0" /></font></Label>
+                  <DatePicker fx:id="dpFechaNacimiento" maxWidth="1.7976931348623157E308" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+
+      <HBox spacing="10.0">
+         <children>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Departamento:"><font><Font name="Yu Gothic Bold" size="11.0" /></font></Label>
+                  <ComboBox fx:id="cmbDepartamento" maxWidth="1.7976931348623157E308" />
+               </children>
+            </VBox>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Curso:"><font><Font name="Yu Gothic Bold" size="11.0" /></font></Label>
+                  <ComboBox fx:id="cmbCurso" maxWidth="1.7976931348623157E308" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+
+      <Label text="Modalidad de estudio:"><font><Font name="Yu Gothic Bold" size="11.0" /></font></Label>
       <HBox spacing="20.0">
          <children>
-            <RadioButton fx:id="rbModalidad" mnemonicParsing="false" selected="true" text="Presencial">
+            <RadioButton mnemonicParsing="false" selected="true" text="Presencial">
                <toggleGroup>
                   <ToggleGroup fx:id="grpModalidad" />
                </toggleGroup>
             </RadioButton>
+            <RadioButton mnemonicParsing="false" text="Virtual" toggleGroup="$grpModalidad" />
          </children>
       </HBox>
 
-      <!-- CheckBox Horario -->
-      <CheckBox fx:id="chbHorario" text="Acepto el horario seleccionado" />
-
-      <!-- Lista de Cursos -->
-      <Label text="Cursos Disponibles:">
+      <!-- LISTVIEW CON CHECKBOXES VISIBLES EN SCENE BUILDER -->
+      <Label text="Seleccione los Horarios y Clases a Matricular:">
          <font><Font name="Yu Gothic Bold" size="12.0" /></font>
+         <VBox.margin><Insets top="5.0" /></VBox.margin>
       </Label>
-      <ListView fx:id="lvcursos" prefHeight="120.0" VBox.vgrow="ALWAYS" />
 
-      <!-- Botones de Acción -->
-      <HBox alignment="CENTER" spacing="15.0">
-         <padding>
-            <Insets top="10.0" />
-         </padding>
-         <children>
-            <Button onAction="#onActionGuardar" style="-fx-background-color: #283da7; -fx-text-fill: white; -fx-font-weight: bold;" text="Registrar Matrícula" />
-            <Button onAction="#onActionLimpiar" style="-fx-background-color: #240977; -fx-text-fill: white; -fx-font-weight: bold;" text="Limpiar" />
-         </children>
-      </HBox>
+      <ListView fx:id="listHorarios" prefHeight="140.0" VBox.vgrow="ALWAYS">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <CheckBox text="[MAT-101] Matemáticas I  |  Lun - Mié - Vie  |  08:00 - 10:00 AM" />
+               <CheckBox selected="true" text="[PRG-201] Programación Java  |  Lun - Mié - Vie  |  10:00 - 12:00 PM" />
+               <CheckBox text="[BD-102] Bases de Datos I  |  Mar - Jue  |  08:00 - 11:00 AM" />
+               <CheckBox text="[FIS-101] Física General  |  Mar - Jue  |  02:00 - 05:00 PM" />
+               <CheckBox text="[ING-101] Inglés Técnico  |  Sábados  |  08:00 - 12:00 PM" />
+            </FXCollections>
+         </items>
+      </ListView>
+
+      <!-- Tabla Resumen -->
+      <Label text="Resumen de Clases Inscritas:">
+         <font><Font name="Yu Gothic Bold" size="12.0" /></font>
+         <VBox.margin><Insets top="5.0" /></VBox.margin>
+      </Label>
+      <TableView fx:id="tblResumen" prefHeight="130.0" VBox.vgrow="ALWAYS">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="80.0" text="Código" />
+            <TableColumn fx:id="colMateria" prefWidth="200.0" text="Asignatura" />
+            <TableColumn fx:id="colDias" prefWidth="160.0" text="Días" />
+            <TableColumn fx:id="colHora" prefWidth="140.0" text="Horario" />
+         </columns>
+      </TableView>
    </children>
 </VBox>

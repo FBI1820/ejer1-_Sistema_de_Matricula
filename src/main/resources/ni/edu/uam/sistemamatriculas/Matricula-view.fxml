@@ -105,8 +105,8 @@
             <Insets top="10.0" />
          </padding>
          <children>
-            <Button onAction="#leerDatos" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-font-weight: bold;" text="Registrar Matrícula" />
-            <Button onAction="#limpiar" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-font-weight: bold;" text="Limpiar" />
+            <Button onAction="#onActionGuardar" style="-fx-background-color: #283da7; -fx-text-fill: white; -fx-font-weight: bold;" text="Registrar Matrícula" />
+            <Button onAction="#onActionLimpiar" style="-fx-background-color: #240977; -fx-text-fill: white; -fx-font-weight: bold;" text="Limpiar" />
          </children>
       </HBox>
    </children>

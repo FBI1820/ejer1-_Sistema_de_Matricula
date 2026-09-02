@@ -37,6 +37,27 @@ public class MatriculaController {
     @FXML
     private CheckBox chbHorario;
 
+    @FXML
+    protected void onActionGuardar() {
+        if (!validar()) {
+            mostrarAlerta(Alert.AlertType.ERROR, "Campos vacíos", "Por favor llene todos los campos.");
+            return;
+        }
+        else
+        {
+            leerDatos();
+            limpiar();
+            mostrarAlerta(Alert.AlertType.INFORMATION, "Registro exitoso", "El estudiante ha sido registrado correctamente.");
+        }
+
+
+    }
+
+    @FXML
+    protected void onActionLimpiar(){
+        limpiar();
+    }
+
 
     public void initialize(){
         cbDepartamento.getItems().addAll("Managua", "Matagalpa", "Jinotega");
@@ -82,6 +103,26 @@ public class MatriculaController {
         }
         return true;
     }
+
+    public Boolean validar() {
+        return !txtUsuario.getText().trim().isEmpty() &&
+                !txtNombre.getText().trim().isEmpty() &&
+                !txtApellido.getText().trim().isEmpty() &&
+                !pwContrasena.getText().trim().isEmpty() &&
+                cbDepartamento.getValue() != null &&
+                dpFechaNacimiento.getValue() != null;
+
+    }
+
+    private void mostrarAlerta(Alert.AlertType tipo, String titulo, String mensaje) {
+        Alert alert = new Alert(tipo);
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
+    }
+
+
 
 
 

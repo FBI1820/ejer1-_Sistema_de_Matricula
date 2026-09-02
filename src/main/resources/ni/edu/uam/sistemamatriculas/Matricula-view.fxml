@@ -1,14 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
+<VBox prefHeight="650.0" prefWidth="620.0" spacing="8.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <padding>
+      <Insets bottom="20.0" left="25.0" right="25.0" top="20.0" />
+   </padding>
+   <children>
+      <!-- Encabezado -->
+      <HBox alignment="CENTER_LEFT" spacing="15.0">
+         <children>
+            <ImageView fx:id="imgLogo" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+            <Label text="Sistema de Matrícula">
+               <font>
+                  <Font name="Yu Gothic Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
 
-</AnchorPane>
+      <!-- Datos del Alumno -->
+      <Label text="Nombre:">
+         <font><Font name="Yu Gothic Bold" size="12.0" /></font>
+      </Label>
+      <TextField fx:id="txtNombre" />
+
+      <Label text="Apellido:">
+         <font><Font name="Yu Gothic Bold" size="12.0" /></font>
+      </Label>
+      <TextField fx:id="txtApellido" />
+
+      <Label text="Contraseña:">
+         <font><Font name="Yu Gothic Bold" size="12.0" /></font>
+      </Label>
+      <PasswordField fx:id="txtPassword" />
+
+      <Label text="Fecha de nacimiento:">
+         <font><Font name="Yu Gothic Bold" size="12.0" /></font>
+      </Label>
+      <DatePicker fx:id="dpFechaNacimiento" maxWidth="1.7976931348623157E308" />
+
+      <!-- Carrera / Departamento -->
+      <HBox spacing="15.0">
+         <children>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Departamento:">
+                     <font><Font name="Yu Gothic Bold" size="12.0" /></font>
+                  </Label>
+                  <ComboBox fx:id="cmbDepartamento" maxWidth="1.7976931348623157E308" />
+               </children>
+            </VBox>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Curso:">
+                     <font><Font name="Yu Gothic Bold" size="12.0" /></font>
+                  </Label>
+                  <ComboBox fx:id="cmbCurso" maxWidth="1.7976931348623157E308" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+
+      <!-- Modalidad -->
+      <Label text="Modalidad de estudio:">
+         <font><Font name="Yu Gothic Bold" size="12.0" /></font>
+      </Label>
+      <HBox spacing="20.0">
+         <children>
+            <RadioButton fx:id="rbPresencial" mnemonicParsing="false" selected="true" text="Presencial">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grpModalidad" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbVirtual" mnemonicParsing="false" text="Virtual" toggleGroup="$grpModalidad" />
+         </children>
+      </HBox>
+
+      <!-- Horarios declarados con CheckBoxes directamente en FXML -->
+      <Label text="Horarios y Clases Disponibles:">
+         <font><Font name="Yu Gothic Bold" size="12.0" /></font>
+      </Label>
+
+      <VBox spacing="10.0" style="-fx-border-color: #cccccc; -fx-padding: 10; -fx-background-color: #f9f9f9;">
+         <children>
+            <CheckBox text="[08:00 - 10:00 AM] Lunes - Miércoles - Viernes — Matemáticas I" />
+            <CheckBox selected="true" text="[10:00 - 12:00 PM] Lunes - Miércoles - Viernes — Programación Java" />
+            <CheckBox text="[08:00 - 11:00 AM] Martes - Jueves — Bases de Datos" />
+            <CheckBox text="[02:00 - 05:00 PM] Martes - Jueves — Física General" />
+            <CheckBox text="[08:00 - 12:00 PM] Sábados — Inglés Técnico" />
+         </children>
+      </VBox>
+
+      <!-- El ListView donde se renderizan las clases con sus CheckBoxes -->
+      <ListView fx:id="listHorarios" prefHeight="160.0" VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>

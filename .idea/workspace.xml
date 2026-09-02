@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7d12f3bf-6b79-4e5b-b224-c5b0b6bda353" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ni/edu/uam/sistemamatriculas/Imagen/uamlogopng.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ni/edu/uam/sistemamatriculas/Matricula-view.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "FBI1820"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/FBI1820/ejer1-_Sistema_de_Matricula",
+    "accountId": "351ba102-b128-49b1-8c34-58d1b056a394"
+  }
+}]]></component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="5.419660092445033E-25" />
+      <entry key="MS500" value="1.403349514588369E-5" />
+      <entry key="S2" value="0.07852541373133214" />
+      <entry key="S5" value="0.6427272437010602" />
+      <entry key="S10" value="1.4749009129769088" />
+      <entry key="S30" value="2.7936091369986897" />
+      <entry key="S60" value="3.329882887331772" />
+      <entry key="M2" value="3.645899202342258" />
+      <entry key="M5" value="3.853451879933981" />
+      <entry key="M10" value="3.925877875653553" />
+      <entry key="M15" value="3.950394488129556" />
+      <entry key="M30" value="3.975101279675657" />
+      <entry key="H1" value="3.9875265386871575" />
+      <entry key="H2" value="3.9937572302379207" />
+      <entry key="H4" value="3.9968771036114497" />
+      <entry key="D1" value="3.9994793071898673" />
+      <entry key="W1" value="3.9999256101661342" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0" />
+      <entry key="M2" value="1.0" />
+      <entry key="M5" value="1.0" />
+      <entry key="M10" value="1.0" />
+      <entry key="M15" value="1.0" />
+      <entry key="M30" value="1.0" />
+      <entry key="H1" value="1.0" />
+      <entry key="H2" value="1.0" />
+      <entry key="H4" value="1.0" />
+      <entry key="D1" value="1.0" />
+      <entry key="W1" value="1.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.7649661009296984E-5" />
+      <entry key="MS500" value="0.1120344954314599" />
+      <entry key="S2" value="0.6246958633418356" />
+      <entry key="S5" value="1.3433427857718547" />
+      <entry key="S10" value="2.262573404534789" />
+      <entry key="S30" value="3.696576123479447" />
+      <entry key="S60" value="4.276766061296486" />
+      <entry key="M2" value="4.61805847439511" />
+      <entry key="M5" value="4.841989072562976" />
+      <entry key="M10" value="4.920090405031421" />
+      <entry key="M15" value="4.946523589868323" />
+      <entry key="M30" value="4.973159506679445" />
+      <entry key="H1" value="4.986554065266563" />
+      <entry key="H2" value="4.993270596049904" />
+      <entry key="H4" value="4.996633687054464" />
+      <entry key="D1" value="4.999438723941453" />
+      <entry key="W1" value="4.99991981222061" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3ImzNFuZxhCi6Mp5JtWUxui48t1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/DELL/Desktop/Sem3P2/ejer1-_Sistema_de_Matricula",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL\Desktop\Sem3P2\ejer1-_Sistema_de_Matricula\src\main\resources\ni\edu\uam\sistemamatriculas\Imagen" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.9437.185" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d12f3bf-6b79-4e5b-b224-c5b0b6bda353" name="Changes" comment="" />
+      <created>1788384490396</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1788384490396</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

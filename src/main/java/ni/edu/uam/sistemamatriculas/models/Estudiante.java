@@ -1,14 +1,15 @@
 package ni.edu.uam.sistemamatriculas.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Setter
+@Data
+@Builder
 public class Estudiante {
     private String nombre;
     private String apellido;
@@ -18,6 +19,6 @@ public class Estudiante {
     private LocalDate fechaNacimiento;
     private String curso;
     private Boolean modalidad;
-    private Boolean Horario;
+    private String Horario;
 
 }
